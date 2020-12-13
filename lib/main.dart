@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'library/navigation/navigation.dart';
+
 void main() => runApp(
       GetMaterialApp(
-        initialRoute: '/',
-        getPages: [GetPage(name: '/', page: () => Home())],
+        initialRoute: initialPage,
+        getPages: pages,
       ),
     );
-
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Fithub")),
-      body: const Center(
-        child: Padding(
-          padding: EdgeInsets.all(8),
-          child: Text("Hello World!"),
-        ),
-      ),
-    );
-  }
-}
